@@ -15,7 +15,7 @@ st.title('Interactive Stock EDA')
 st.subheader('Target')
 st.write('The target of this EDA is to explore a particular stock data in detail while manipulating in a live, interactive manner. Further add ons may include automated visualization and analysis of particular highs or lows')
 
-stock = st.text_input("Enter the stock name: \n")
+stock = st.text_input("Enter the stock ticker name: \n (try AAPL for starters!)\n")
 option = st.slider("How many days of data would you like to see?", 1,365,1, key='3')
 
 end = datetime.today().strftime('%Y-%m-%d')
