@@ -7,33 +7,18 @@ import streamlit as st
 warnings.filterwarnings("ignore") 
 import seaborn as sns
 
-from pandas_datareader import DataReader
+from pandas_datareader import DataReader, data
 from datetime import datetime
 
-st.title('Crypto Stock EDA')
+st.title('Stock EDA')
 st.header('Target')
 st.write('The target of this EDA is to draw conclusions about the relationship between different crypto stocks')
 
+stock_name = st.text_input("Enter the stock name: \n")
+option = st.slider("How many days of data would you like to see?", 1,60,1)
 
-tech_list = ['COIN','MSTR','NVDA','MARA', 'SQ', 'SI', 'RIOT', 'AMD', 'PYPL', 'CME']
 
-#Setting the end date to today
-end = datetime.now()
-
-#Start date set to 2 year back
-start = datetime(end.year-2,end.month,end.day)
-
-#Using Yahoo Finance to grab the stock data
-for stock in tech_list:
-    globals()[stock] = DataReader(stock,'yahoo',start,end)
-    
-#testing if the global variable worked 
-st.dataframe(COIN.head())
-
-# Basic stats for Coinbase Stock
-st.dataframe(COIN.describe())
-
-#Some basic info about the dataframe
-st.dataframe(COIN.info())
-
-st.header('What is the change in the stock price over time?')
+end = datetime.today().strftime('%Y-%m-%d')
+start = (datetime.today() - timedelta(option)).strftime('%Y-%m-%d)
+@st.cache
+                                            
