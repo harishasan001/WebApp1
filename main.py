@@ -12,8 +12,8 @@ from datetime import datetime, timedelta
 import yfinance as yf
 
 st.title('Stock EDA')
-st.header('Target')
-st.write('The target of this EDA is to draw conclusions about the relationship between different crypto stocks')
+st.subheader('Target')
+st.write('The target of this EDA is to explore a particular stock data in detail')
 
 stock = st.text_input("Enter the stock name: \n")
 option = st.slider("How many days of data would you like to see?", 1,365,1)
@@ -26,6 +26,8 @@ get_stock_data = yf.Ticker(stock)
 # Set the time line of your data
 ticket_df = get_stock_data.history(period='1d', start=start, end=end)
 
-# Show your data in line chart
+st.subheader('Closing Price')
 st.line_chart(ticket_df.Close)
+
+st.subheader('Volume')
 st.line_chart(ticket_df.Volume)
