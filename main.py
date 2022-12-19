@@ -15,7 +15,7 @@ st.title('Stock EDA')
 st.header('Target')
 st.write('The target of this EDA is to draw conclusions about the relationship between different crypto stocks')
 
-stock_name = st.text_input("Enter the stock name: \n")
+stock = st.text_input("Enter the stock name: \n")
 option = st.slider("How many days of data would you like to see?", 1,60,1)
 
 end = datetime.today().strftime('%Y-%m-%d')
