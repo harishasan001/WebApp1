@@ -16,7 +16,7 @@ st.subheader('Target')
 st.write('The target of this EDA is to explore a particular stock data in detail')
 
 stock = st.text_input("Enter the stock name: \n")
-option = st.slider("How many days of data would you like to see?", 1,365,1)
+option = st.slider("How many days of data would you like to see?", 1,365,1, key='3')
 
 end = datetime.today().strftime('%Y-%m-%d')
 start = (datetime.today() - timedelta(option)).strftime('%Y-%m-%d')
@@ -30,3 +30,7 @@ ticket_df = get_stock_data.history(period='1d', start=start, end=end)
 st.button('See Closing Price', key= '1')
 if st.button('See Closing Price', key= '1'):
     st.line_chart(ticket_df.Close)
+
+st.button('See Volume', key= '2')
+if st.button('See Volume', key= '2'):
+    st.line_chart(ticket_df.Volume)
