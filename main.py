@@ -31,3 +31,13 @@ st.line_chart(ticket_df.Close)
 
 st.subheader('Volume')
 st.line_chart(ticket_df.Volume)
+
+st.subheader('Moving Average')
+ma_day = [10,20,50]
+
+for ma in ma_day:
+    column_name = "MA for %s days" %(str(ma))
+    
+    stock[column_name] = stock['Adj Close'].rolling(window=ma,center=False).mean()
+
+stock[['Adj Close','MA for 10 days','MA for 20 days','MA for 50 days']].plot(subplots=False,figsize=(12,5))
