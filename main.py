@@ -26,8 +26,5 @@ get_stock_data = yf.Ticker(stock)
 # Set the time line of your data
 ticket_df = get_stock_data.history(period='1d', start=start, end=end)
 
-st.subheader('Closing Price')
 st.line_chart(ticket_df.Close)
-
-st.subheader('Volume')
 st.line_chart(ticket_df.Volume)
