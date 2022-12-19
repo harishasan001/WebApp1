@@ -22,7 +22,7 @@ end = datetime.today().strftime('%Y-%m-%d')
 start = (datetime.today() - timedelta(option)).strftime('%Y-%m-%d')
 @st.cache
 def load_data(stock, start_date, end_date):
-  df - data.DataReader(name-stock, start-start_date, end-end_date, data_source-'yahoo")
+  df = data.DataReader(name-stock, start-start_date, end-end_date, data_source-'yahoo")
   return df                                                        
 
 data_load_state - st.text("Loading data...")
