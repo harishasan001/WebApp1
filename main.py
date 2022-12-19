@@ -11,7 +11,7 @@ from pandas_datareader import DataReader, data
 from datetime import datetime, timedelta
 import yfinance as yf
 
-st.title('interactive Stock EDA')
+st.title('Interactive Stock EDA')
 st.subheader('Target')
 st.write('The target of this EDA is to explore a particular stock data in detail')
 
