@@ -29,3 +29,11 @@ for stock in tech_list:
     
 #testing if the global variable worked 
 st.dataframe(COIN.head())
+
+# Basic stats for Coinbase Stock
+st.dataframe(COIN.describe())
+
+#Some basic info about the dataframe
+st.dataframe(COIN.info())
+
+st.header('What is the change in the stock price over time?')
