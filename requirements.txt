@@ -11,4 +11,4 @@ streamlit-metrics==0.1.0
 seaborn==0.12.1
 pandas-datareader==0.10.0
 datetime==4.8
-yfinance=0.1.94
+yfinance==0.1.94
