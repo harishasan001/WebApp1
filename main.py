@@ -19,7 +19,7 @@ option = st.slider("How many days of data would you like to see?", 1,60,1)
 
 
 end = datetime.today().strftime('%Y-%m-%d')
-start = (datetime.today() - timedelta(option)).strftime('%Y-%m-%d)
+start = (datetime.today() - timedelta(option)).strftime('%Y-%m-%d')
 @st.cache
 def load_data(stock, start_date, end_date):
   df - data.DataReader(name-stock, start-start_date, end-end_date, data_source-'yahoo")
