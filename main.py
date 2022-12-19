@@ -11,8 +11,7 @@ from pandas_datareader import DataReader, data
 from datetime import datetime, timedelta
 import yfinance as yf
 
-st.title('Interactive Stock EDA')
-st.subheader('Target')
+st.title('Interactive Live Stocks EDA')
 st.write('The target of this EDA is to explore a particular stock data in detail while manipulating in a live, interactive manner. Further add ons may include automated visualization and analysis of particular highs or lows')
 
 stock = st.text_input("Enter the stock ticker name: \n (try AAPL for starters!)\n")
