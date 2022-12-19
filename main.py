@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 import seaborn as sns
 
 from pandas_datareader import DataReader, data
-from datetime import datetime
+from datetime import datetime. timedelta
 
 st.title('Stock EDA')
 st.header('Target')
