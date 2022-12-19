@@ -1,5 +1,5 @@
 plotly==5.4.0
-streamlit==1.2.0
+streamlit==1.16.0
 pandas==1.2.3
 openpyxl==3.0.7
 Pillow>=8.3.2
@@ -10,4 +10,5 @@ streamlit-analytics==0.2.2
 streamlit-metrics==0.1.0
 seaborn==0.12.1
 pandas-datareader==0.10.0
-datetime==3.2
+datetime==4.8
+
