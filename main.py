@@ -10,6 +10,11 @@ import seaborn as sns
 from pandas_datareader import DataReader
 from datetime import datetime
 
+st.title('Crypto Stock EDA')
+st.header('Target')
+st.write('The target of this EDA is to draw conclusions about the relationship between different crypto stocks')
+
+
 tech_list = ['COIN','MSTR','NVDA','MARA', 'SQ', 'SI', 'RIOT', 'AMD', 'PYPL', 'CME']
 
 #Setting the end date to today
