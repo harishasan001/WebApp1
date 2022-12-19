@@ -26,18 +26,12 @@ get_stock_data = yf.Ticker(stock)
 # Set the time line of your data
 ticket_df = get_stock_data.history(period='1d', start=start, end=end)
 
-st.subheader('Closing Price')
-st.line_chart(ticket_df.Close)
 
-st.subheader('Volume')
-st.line_chart(ticket_df.Volume)
+st.button('See Closing Price')
+if st.button('See Closing Price'):
+    st.line_chart(ticket_df.Close)
 
-st.subheader('Moving Average')
-ma_day = [10,20,50]
+st.button('See Volume')
+if st.button('See Volume'):
+    st.line_chart(ticket_df.Volume)
 
-for ma in ma_day:
-    column_name = "MA for %s days" %(str(ma))
-    
-    stock[column_name] = stock['Adj Close'].rolling(window=ma,center=False).mean()
-
-stock[['Adj Close','MA for 10 days','MA for 20 days','MA for 50 days']].plot(subplots=False,figsize=(12,5))
