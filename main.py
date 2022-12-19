@@ -30,8 +30,3 @@ ticket_df = get_stock_data.history(period='1d', start=start, end=end)
 st.button('See Closing Price', key= '1')
 if st.button('See Closing Price', key= '1'):
     st.line_chart(ticket_df.Close)
-
-st.button('See Volume', key= '2')
-if st.button('See Volume', key= '2'):
-    st.line_chart(ticket_df.Volume)
-
