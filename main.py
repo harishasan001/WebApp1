@@ -25,7 +25,7 @@ def load_data(stock, start_date, end_date):
   df = data.DataReader(name=stock, start=start_date, end=end_date, data_source='yahoo')
   return df                                                        
 
-data_load_state - st.text("Loading data...")
+data_load_state = st.text("Loading data...")
 df = load_data(stock=stock_name, start_date=start, end_date=end)
 df.sort_index(axis=0, inplace=True, ascending=False)
 st.subheader(f' {stock_name} stock prices for the past {option} days')
