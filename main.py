@@ -27,11 +27,11 @@ get_stock_data = yf.Ticker(stock)
 ticket_df = get_stock_data.history(period='1d', start=start, end=end)
 
 
-st.button('See Closing Price')
-if st.button('See Closing Price'):
+st.button('See Closing Price', key= '1')
+if st.button('See Closing Price', key= '1'):
     st.line_chart(ticket_df.Close)
 
-st.button('See Volume')
-if st.button('See Volume'):
+st.button('See Volume', key= '2')
+if st.button('See Volume', key= '2'):
     st.line_chart(ticket_df.Volume)
 
