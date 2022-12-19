@@ -1,9 +1,10 @@
 import pandas as pd
 from pandas import Series,DataFrame
 import numpy as np
-import streamlit as st
-
 import plotly.express as px
+import warnings 
+import streamlit as st
+warnings.filterwarnings("ignore") 
 import seaborn as sns
 
 from pandas_datareader import DataReader
