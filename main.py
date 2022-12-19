@@ -3,7 +3,7 @@ from pandas import Series,DataFrame
 import numpy as np
 import streamlit as st
 
-import matplotlib.pyplot as plt
+import plotly.express as px
 import seaborn as sns
 
 from pandas_datareader import DataReader
