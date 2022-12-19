@@ -5,8 +5,6 @@ import streamlit as st
 
 import matplotlib.pyplot as plt
 import seaborn as sns
-sns.set_style('whitegrid')
-%matplotlib inline
 
 from pandas_datareader import DataReader
 from datetime import datetime
@@ -24,4 +22,4 @@ for stock in tech_list:
     globals()[stock] = DataReader(stock,'yahoo',start,end)
     
 #testing if the global variable worked 
-COIN.head()
+st.dataframe(COIN.head())
