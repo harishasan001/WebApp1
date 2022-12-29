@@ -1,2 +1,3 @@
 # WebApp1
-Crypto Stock EDA Streamlit webapp
+
+Stock EDA Streamlit webapp
